@@ -1,0 +1,145 @@
+<div class="right-container">
+    <div class="right-container-nav-bar">
+        <div class="nav-bar-tabs">
+            <div class="Today" [ngClass]="{'Today-active': isTodayActive, 'Today': !isTodayActive}" (click)="toggleTab('today')">Today</div>
+            <div class="Week" [ngClass]="{'Week-active': isWeekActive, 'Week': !isWeekActive}" (click)="toggleTab('week')">Week</div>
+            <div class="underline-button" [ngClass]="{'underline-button-Today': isTodayActive, 'underline-button-Week': isWeekActive}"></div>
+        </div>
+        <div class="nav-bar-metric">
+            <div class="celsius" (click)="setMetric('celsius')" [ngClass]="{'celsius-active': isCelsiusActive}">°C</div>
+            <div class="fahrenheit" (click)="setMetric('fahrenheit')" [ngClass]="{'fahrenheit-active': isFahrenheitActive}">°F</div>
+        </div>
+    </div>
+
+    <div class="right-container-data-box">
+        <div class="right-container-week-cards" *ngIf="isWeekActive">
+            <div class="card">
+                <div class="card-day">Sunday</div>
+                <!-- <div class="card-temp-img"><img src="./../../assets/sunny-day.png" alt=""></div> -->
+                <div class="card-temp-value"><span class="temp-max">15°</span><span class="temp-min">-3°</span></div>
+            </div>
+            <div class="card">
+                <div class="card-day">Monday</div>
+                <!-- <div class="card-temp-img"><img src="./../../assets/sunny-day.png" alt=""></div> -->
+                <div class="card-temp-value"><span class="temp-max">15°</span><span class="temp-min">-3°</span></div>
+            </div>
+            <div class="card">
+                <div class="card-day">Tuesday</div>
+                <!-- <div class="card-temp-img"><img src="./../../assets/sunny-day.png" alt=""></div> -->
+                <div class="card-temp-value"><span class="temp-max">15°</span><span class="temp-min">-3°</span></div>
+            </div>
+            <div class="card">
+                <div class="card-day">Wednesday</div>
+                <!-- <div class="card-temp-img"><img src="./../../assets/sunny-day.png" alt=""></div> -->
+                <div class="card-temp-value"><span class="temp-max">15°</span><span class="temp-min">-3°</span></div>
+            </div>
+            <div class="card">
+                <div class="card-day">Thursday</div>
+                <!-- <div class="card-temp-img"><img src="./../../assets/sunny-day.png" alt=""></div> -->
+                <div class="card-temp-value"><span class="temp-max">15°</span><span class="temp-min">-3°</span></div>
+            </div>
+            <div class="card">
+                <div class="card-day">Friday</div>
+                <!-- <div class="card-temp-img"><img src="../../assets/sunset.jpg" alt=""></div> -->
+                <div class="card-temp-value"><span class="temp-max">15°</span><span class="temp-min">-3°</span></div>
+            </div>
+            <div class="card">
+                <div class="card-day">Saturday</div>
+                <!-- <div class="card-temp-img"><img src="C:\WeatherApp\WeatherApp\src\assets" alt="" onerror="console.log('Image not found: '+ this.src)"></div> -->
+                <div class="card-temp-value"><span class="temp-max">15°</span><span class="temp-min">-3°</span></div>
+            </div>
+        </div>
+        <div class="right-container-today-cards" *ngIf="isTodayActive">
+            <div class="card">
+                <div class="card-day">12:00</div>
+                <!-- <div class="card-temp-img"><img src="../../../assets/sunny-day.png" alt=""></div> -->
+                <div class="card-temp-value">15°</div>
+            </div>
+            <div class="card">
+                <div class="card-day">12:00</div>
+                <!-- <div class="card-temp-img"><img src="../../../assets/sunny-day.png" alt=""></div> -->
+                <div class="card-temp-value">15°</div>
+            </div>
+            <div class="card">
+                <div class="card-day">12:00</div>
+                <!-- <div class="card-temp-img"><img src="../../../assets/sunny-day.png" alt=""></div> -->
+                <div class="card-temp-value">15°</div>
+            </div>
+            <div class="card">
+                <div class="card-day">12:00</div>
+                <!-- <div class="card-temp-img"><img src="../../../assets/sunny-day.png" alt=""></div> -->
+                <div class="card-temp-value">15°</div>
+            </div>
+            <div class="card">
+                <div class="card-day">12:00</div>
+                <!-- <div class="card-temp-img"><img src="../../../assets/sunny-day.png" alt=""></div> -->
+                <div class="card-temp-value">15°</div>
+            </div>
+            <div class="card">
+                <div class="card-day">12:00</div>
+                <!-- <div class="card-temp-img"><img src="../../../assets/sunny-day.png" alt=""></div> -->
+                <div class="card-temp-value">15°</div>
+            </div>
+            <div class="card">
+                <div class="card-day">12:00</div>
+                <!-- <div class="card-temp-img"><img src="../../../assets/sunny-day.png" alt=""></div> -->
+                <div class="card-temp-value">15°</div>
+            </div>
+        </div>
+        <div class="right-container-todays-highlight">
+            <div class="right-container-today-forecast-title">Today's Forecast</div>
+            <div class="right-container-today-forecast-cards">
+                <div class="right-container-today-forecast-card">
+                    <div class="right-container-today-forecast-card-title">Feels Like</div>
+                    <div class="right-container-today-forecast-card-content">
+                        <fa-icon [icon]="faThermometerQuarter" class="icon" style="color: salmon;"></fa-icon>
+                        <div class="value">7 <span class="unit-feels">°C</span></div>
+                    </div>
+                </div>
+                <div class="right-container-today-forecast-card">
+                    <div class="right-container-today-forecast-card-title">Wind Speed</div>
+                    <div class="right-container-today-forecast-card-content">
+                        <fa-icon [icon]="faWind" class="icon" style="color: #dadada;"></fa-icon>
+                        <div class="value">7 <span class="unit">km/h</span></div>
+                    </div>
+                </div>
+                <div class="right-container-today-forecast-card">
+                    <div class="right-container-today-forecast-card-title">Humidity</div>
+                    <div class="humidity-status">
+                        <div class="humid-drop"><fa-icon [icon]="faDroplet" style="color: #7c91ff;"></fa-icon></div>
+                        <div class="humidity-status-value">{{humidity}} <sup class="unit-humid">%</sup></div>
+                    </div>
+                    <div class="right-container-todays-humidity-value" style="color: #d3deff;">{{ getHumidityStatus(humidity) }}</div>
+                </div>
+                    <div class="right-container-today-forecast-cards">
+                </div>
+            </div>
+            <div class="right-container-today-forecast-cards">
+                <div class="right-container-today-forecast-card">
+                    <div class="right-container-today-forecast-card-title">Dew Point</div>
+                    <div class="right-container-today-forecast-card-content">
+                        <fa-icon [icon]="faDroplet" class="icon" style="color: salmon;"></fa-icon>
+                        <div class="value">7 <span class="unit-dew">°</span></div>
+                    </div>
+                </div>
+                <div class="right-container-today-forecast-card">
+                    <div class="right-container-today-forecast-card-title">Visibility</div>
+                    <div class="right-container-today-forecast-card-content">
+                        <fa-icon [icon]="faCloud" class="icon" style="color: #A9A9A9;"></fa-icon>
+                        <div class="value">7 <span class="unit">km</span></div>
+                    </div>
+                    </div>
+                    <div class="right-container-today-forecast-card">
+                        <div class="right-container-today-forecast-card-title">Sunrise & Sunset</div>
+                        <div class="sunrise-sunset-value">
+                            <div class="sunrise">
+                                <fa-icon [icon]="faSun" class="icon" style="color: #FFA500;"></fa-icon>
+                                <div class="value">6:30 AM</div>
+                            </div>
+                            <div class="sunset">
+                                <fa-icon [icon]="faSun" class="icon" style="color: #FF6347;"></fa-icon>
+                                <div class="value">6:40 PM</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>

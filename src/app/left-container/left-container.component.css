@@ -1,0 +1,147 @@
+.left-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.left-container-nav-bar {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-bar {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.search-icon {
+    margin-right: 5px;
+    color: white;
+}
+
+.search-input {
+    flex: 1;
+}
+
+.search-input input {
+    border: 2px solid white; /* Added border */
+    border-radius: 10px; /* Rounded corners */
+    text-align: center;
+    width: 95%;
+    text-transform: capitalize;
+    padding: 3px;
+    font-size: 90%;
+ 
+}
+
+.location-icon {
+    text-align: center;
+}
+
+.left-container-data-box {
+    flex: 12;
+    margin-top: -10px; /* Move the data box up a bit */
+    color: white;
+}
+
+.left-container-data-img {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0; /* Adjust this value to move the image up */
+}
+
+.left-container-data-img img {
+    width: 160px;
+    height: 160px;
+}
+
+.cloud-sun{
+    height: 100px;
+    width: 100px;
+}
+
+.left-container-temp-value, 
+.left-container-day-time, 
+.dividing-lines, 
+.left-container-other-details {
+    text-align: center;
+    font-size: 16px;
+}
+
+.left-container-day-time span{
+    color: white;
+    font-size: 18px;
+}
+.left-container-temp-value {
+    font-size: x-large;
+    font-weight: 500;
+}
+
+.left-container-day-time {
+    font-size: large;
+    font-weight: 500;
+}
+
+.dividing-lines {
+    height: 1px;
+    width: 100%;
+    background-color: transparent;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
+.left-container-other-details {
+    margin-top: 20px; /* Adjust as needed */
+}
+
+.left-container-temp-summary,
+.left-container-rain-stats {
+    display: flex;
+    align-items: first baseline; /* Aligns icons and text vertically */
+    justify-content: center;
+    margin-bottom: 10px; /* Space between Mostly Cloudy and Rain stats */
+    
+}
+
+.left-container-temp-summary-text,
+.left-container-rain-stats-text {
+    margin-left: 5px; /* Space between icon and text */
+    font-size: medium; /* Make font size consistent */
+    margin-left: 10px;
+    font-weight: 500;
+}
+
+.left-container-location-details {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px; /* Adjust as needed */
+}
+
+.location-dot-icon {
+    margin-right: 5px;
+}
+
+.left-container-location-name {
+    font-size: 115%;
+    font-weight: 500;
+}
+
+.left-container-rain-stats{
+    margin-right: 8px;
+    font-size: large;
+}
+.left-container-rain-stats-text{
+    margin-right: 19px;
+    font-size: medium;
+    font-weight: 500;
+}

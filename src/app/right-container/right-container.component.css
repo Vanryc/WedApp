@@ -1,0 +1,434 @@
+/* Right Outer Container */
+.right-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navigation Bar CSS */
+.right-container-nav-bar {
+    flex: 2;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: small;
+    font-weight: 500;
+}
+
+/* Container Box CSS */
+.right-container-data-box {
+    flex: 12;
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+    margin-top: 0px;
+
+}
+
+/* nav-bar-tabs CSS */
+.nav-bar-tabs {
+    display: flex;
+    flex-direction: row;
+    margin-left: 30px;
+    margin-top: 10px;
+    position: relative;
+}
+
+/* Today and Week CSS */
+.Today {
+    margin-right: 10px; /* Adjust space as needed */
+    color: grey;
+    cursor: pointer; /* Add cursor pointer */
+}
+
+.Today-active {
+    color: white;
+}
+
+.Week {
+    margin-left:10px; /* Adjust space as needed */
+    color: grey;
+    cursor: pointer; /* Add cursor pointer */
+}
+
+.Week-active {
+    color:white;
+}
+
+/* underline-button CSS */
+.underline-button {
+    width: 48px;
+    height: 2px; /* Corrected height */
+    background-color: #dae3ff;
+    position: absolute;
+    bottom: -2px; /* Adjust position relative to the text */
+    left: 0;
+    transition: transform 0.3s ease-out; /* Smooth transition */
+}
+
+.underline-button-Today {
+    transform: translateX(0%); /* Adjust translation as needed */
+}
+
+.underline-button-Week {
+    transform: translateX(100%); /* Adjust translation as needed */
+}
+
+/* nav-bar-metric CSS */
+.nav-bar-metric {
+    display: flex;
+    flex-direction: row;
+    margin-right: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Celsius and Fahrenheit CSS */
+.celsius, .fahrenheit {
+    width: 30px;  /* Reduced size */
+    height: 30px; /* Reduced size */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    font-size: small; /* Adjusted font size */
+    color: #000066;
+    background-color: white;
+    cursor: pointer; /* Add cursor pointer */
+}
+
+.fahrenheit {
+    margin-left: 10px;
+}
+
+.celsius:hover, .fahrenheit:hover {
+    color: white;
+    background-color: #000066;
+}
+
+.celsius-active, .fahrenheit-active {
+    color: white;
+    background-color: #000066;
+}
+
+.right-container-data-box{
+    display: flex;
+    flex-direction: column;
+    flex: 12;
+    margin-left: 30px;
+}
+
+.right-container-week-cards{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    color: white;
+    width: 75px;
+    height: 95px;
+    background-color:#2c489b;
+    border-radius: 10px;
+    margin-left: 5px;
+    text-align: center;
+    justify-content: center;
+    font-size: x-small;
+    font-weight: 500px;
+}
+
+.card-day{
+    margin: 5px;
+    margin-top: 7px;
+}
+.card-temp-value{
+    margin: 1px;
+}
+
+.card-temp-img img{
+    width: 40px;
+    height: 40px;
+}
+
+.right-container-today-cards{
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.right-container-todays-highlight{
+    flex: 3;
+    display: flex;
+    flex-direction: column; 
+}
+
+.right-container-today-forecast-title{
+    margin-top: 30px;
+    color: white;
+    flex: 2;
+    font-size: medium;
+    font-weight: bold;
+    
+}
+.right-container-today-forecast-cards{
+    flex: 8;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 0%;
+}
+
+.right-container-today-forecast-card {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    background-color: #2c489b;
+    border-radius: 10px;
+    width: 180px;
+    height: 130px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 13px;
+}
+.right-container-today-forecast-card-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 31px;
+    font-size: 35px;
+}
+.sunrise, .sunset {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    font-size: 20px;
+}
+.icon {
+    margin-right: 8px; /* Space between icon and value */
+}
+
+.value {
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+}
+
+.unit {
+    font-size: 16px;
+    margin-left: 2px;
+}
+
+.right-container-today-forecast-card-title {
+    color: gray;
+    font-size: 12px;
+    font-weight: 500;
+}   
+
+.right-container-today-forecast-card-title{
+    flex: 1;
+    color: gray;
+    font-size: 12px;
+    font-weight: 600;
+
+}
+.gauge{
+    flex: 2;
+    width: 70%;
+    max-width: 180px;
+    font-size: 32px;
+    color: rgb(34, 22, 22);
+    font-weight: 500;
+    margin-bottom: -5px;
+}
+
+.gauge__body{
+    width: 100%;
+    height: 0;
+    padding-bottom: 50%;
+    background: #f3f3f4;
+    position: relative;
+    border-top-left-radius: 100% 200%;
+    border-top-right-radius: 100% 200%;
+    overflow: hidden;
+    margin-top: 1rem;
+}
+
+.gauge__fill{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: inherit;
+    height: 100%;
+    background: #ffbfbe;
+    transform-origin: center top;
+    transform: rotate(0.25turn);
+    transition: transform 0.2s ease-out;
+}
+
+.gauge__cover{
+    width: 75%;
+    height: 150%;
+    background: #ffffff;
+    border-radius: 50%;
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%);
+
+    /* Text display*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 25%;
+    box-sizing: border-box;
+    color: #ffffff;
+}
+
+.right-container-todays-highlight .wind-status {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: medium;
+}
+
+.wind-status-logo {
+    margin-right: 8px; /* Space between image and wind speed */
+}
+
+.wind-status-logo img {
+    width: 35px; /* Adjust the image size */
+    height: 35px;
+}
+
+.wind-status-value {
+    display: flex;
+    align-items: center;
+    font-size: 30px; /* Smaller font size for wind speed */
+    font-weight: 500;
+}
+
+.unit {
+    font-size: 14px; /* Smaller font size for "km/h" */
+    margin-left: 2px; /* Adjust spacing if needed */
+}
+
+
+.sunrise-sunset-value{
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+/* CSS for sunrise and sunset */
+
+
+.sunrise-img img, .sunset-img img {
+    width: 30px;
+    height: 30px;
+}
+
+.sunrise-time, .sunset-time {
+    margin-left: 5px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-weight: 500;
+    font-size: medium;
+}
+.right-container-todays-humidity-value{
+    font-size: 12px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.right-container-todays-highlight .humidity-status {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: medium;
+}
+
+.right-container-today-forecast-card-title{
+    margin-top: 8px;
+    color: white;
+}
+.right-container-todays-humidity-value{
+    margin-bottom: 5px;
+}
+.humidity-status-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.humidity-status {
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+}
+
+.humid-drop {
+    font-size: 35px;
+    color: #7c91ff; /* Adjust the color as needed */
+    margin-right: 10px; /* Space between the icon and the value */
+}
+
+.humidity-status-value {
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+}
+
+.unit-humid {
+    font-size: 24px;
+    margin-left: 5px; /* Space between the value and the unit */
+}
+
+.very-humid {
+    font-size: 18px; /* Adjust the font size for the 'very humid' label */
+    color: #888; /* Adjust the color if needed */
+    margin-top: 5px; /* Space above the 'very humid' label */
+}
+
+.unit-dew{
+    font-size: 18px;
+    justify-content: center;
+    margin-left: 2px;
+    margin-bottom: 15px;
+}
+.unit-feels{
+    font-size: 18px;
+    justify-content: center;
+    margin-left: 2px;
+    margin-bottom: 15px;
+}
+
+.drew{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 40px;
+    margin-left: 25px;
+}
+
+drew-drop{
+    width: 25px; /* Adjust size as needed */
+    height: 25px;
+    margin-right: 30px; /* Space between image and percentage */
+    margin-top: 5px;    
+}
+
+.drew-status-value{
+    display: flex;
+    align-items: center; 
+    font-size: 30px; 
+    font-weight: 500;
+}

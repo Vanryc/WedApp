@@ -1,0 +1,65 @@
+<div class="left-container-nav-bar">
+    <div class="search-bar">
+        <div class="search-icon">
+            <fa-icon [icon]="faMagnifyingGlass"></fa-icon>
+        </div>
+        <div class="search-input">
+            <input type="text" id="searchCity" placeholder="Search City">  
+        </div>
+        <div class="search-button" (click)="onSearch()">
+            Search
+        </div>
+    </div>
+ 
+
+    <div class="left-container-data-box">
+        <div class="left-container-temp-data"></div>
+        <div class="left-container-data-img">
+            <!-- <img id="" src="{{this.weatherService.temperatureData.summaryImage}}" alt="summaryImage"> -->
+        </div>
+        <div class="left-container-temp-value">28<sup>°C</sup></div>
+        <div class="left-container-day-time">Monday, <span style="color: #85bedf;">16:00</span></div>
+        <div class="dividing-lines"></div>
+        <div class="left-container-other-details">
+            <div class="left-container-temp-summary">
+                <fa-icon [icon]="faCloud" style="color: #5c70d3;"></fa-icon>
+                <div class="left-container-temp-summary-text">Mostly Cloudy</div>
+            </div>
+            <div class="left-container-rain-stats">
+                <fa-icon [icon]="faCloudRain" style="color: #7c91ff"></fa-icon>
+                <div class="left-container-rain-stats-text">Rain - 30%</div>
+            </div>
+            <div class="left-container-location-details">
+                <div class="left-container-location-details">
+                    <fa-icon [icon]="faLocationDot" class="location-dot-icon" style="color: #cc0022;"></fa-icon>
+                    <div class="left-container-location-name">Olongapo, Philippines</div>
+                </div>
+                <div class="left-container-hot-img">
+                <div class="hot-img">
+                    <!-- <img src="https://img.freepik.com/premium-vector/sunset-with-tree-silhouette-background_670382-372068.jpg?w=826" alt=""> -->
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Example temperature value
+        var temperature = 28; // Replace with your actual temperature variable
+
+        // Get the image element
+        var imageElement = document.getElementById('temperature-image');
+
+        // Set image source based on temperature
+        if (temperature < 25) {
+            imageElement.src = 'https://img.freepik.com/free-vector/cartoon-winter-snowy-landscape-with-lake-forest_107791-24673.jpg?t=st=1723058438~exp=1723062038~hmac=9310338c9c50050a566682cc34a137bb9b7059faab839d300e36afe96f703920&w=826'; // Replace with your cold image URL
+        } else if (temperature >= 30) {
+            imageElement.src = 'https://img.freepik.com/premium-photo/sunset-landscape-desert-with-mountains-cactuses-silhouette-illustration_159446-1420.jpg?w=826'; // Replace with your hot image URL
+        } else {
+            imageElement.src = ''; // No image or default image if needed
+        }
+    });
+</script> -->
